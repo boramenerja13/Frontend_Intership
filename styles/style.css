@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.rectangle {
+  width: 1992px;
+  height: 4401px;
+  display: flex;
+  margin: auto;
+  border: 1px solid #ccc; 
+}
