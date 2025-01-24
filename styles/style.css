@@ -5,7 +5,6 @@ body {
 }
 
 .homepage {
-  width: 1922px;
   height: 4401px;
   margin: 0 auto;
 }
@@ -20,31 +19,49 @@ footer p {
 }
 
 .header {
-  width: 1920px;
-  height: 248.98px;
+  height: 250px;
   max-width: 100%;
   position: relative;
 }
 
+@media screen and (max-width: 500px) {
+  .header {
+    height: 60vh !important;
+  }
+}
+
+
+@media screen and (min-width: 501px),
+screen and (max-width: 770px) {
+  .header {
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 771px) {
+  .header {
+    height: 250px;
+  }
+
+}
+
 .banner {
-  width: 1920px;
   height: 64.98px;
   line-height: 64.98px;
   max-width: 100%;
 }
 
 .navbar-custom {
-  width: 1920px;
   height: 194px;
   max-width: 100%;
   align-items: center;
+  padding-top: 20px;
 }
 
 
 .container-1 {
   position: relative;
   top: -3px;
-  width: 1920px;
   height: 1080px;
   background-color: #d8c7c6;
   margin: 0 auto;
@@ -55,7 +72,6 @@ footer p {
 
 .container-2 {
   position: relative;
-  width: 1920px;
   height: 763px;
   background-color: #f4f4f4;
   margin: 0 auto;
@@ -63,8 +79,6 @@ footer p {
 }
 
 .container-3 {
-  position: relative;
-  width: 1920px;
   display: flex;
   background-color: #f4f4f4;
   overflow: hidden;
@@ -78,9 +92,7 @@ footer p {
 }
 
 .logo {
-  width: 210px;
   height: 67.19px;
-  position: absolute;
   top: 97.02px;
   left: 178px;
   margin-right: 20px;
@@ -94,7 +106,6 @@ footer p {
 .bottom-row {
   height: 67.19px;
   top: 116.02px;
-  gap: 20px;
   padding-left: 178px;
   display: flex;
   justify-content: center;
@@ -111,12 +122,10 @@ footer p {
 }
 
 .carousel-inner {
-  width: 1920px;
   height: 763px;
 }
 
 .carousel-item img {
-  width: 635px;
   height: 661.91px;
   object-fit: cover;
 }
@@ -143,24 +152,62 @@ footer p {
   height: 20px;
 }
 
-.glide__slide img {
-  object-fit: cover;
+.glide__arrows {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
 }
 
-.glide__arrows button {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+.glide__arrow {
+  background-color: transparent;
   border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  font-size: 20px;
+  color: #000;
   cursor: pointer;
 }
 
-.glide__arrows button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.glide__arrow:hover {
+  color: #ff5722;
 }
 
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+
+  .top-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .container-1 {
+    height: auto;
+  }
+
+  .container-2 {
+    height: auto;
+  }
+
+  .carousel-img {
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+  }
+
+  .container-3 {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 
 @media (max-width: 1920px) {
 

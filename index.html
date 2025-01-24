@@ -18,24 +18,28 @@
       <div class="bg-dark text-white text-center py-2">
         <p class="mb-0">Use this banner to advertise a special promotion—20% off</p>
       </div>
-      <div class="navbar-custom">
-        <div class="top-row d-flex justify-content-between align-items-center px-4">
-          <div class="d-flex align-items-center">
+      <div class="container navbar-custom">
+        <div class="row d-flex justify-content-between align-items-center px-4">
+          <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center">
             <a href="#" class="nav-link text-dark me-3">Stitch Rewards</a>
             <a href="#" class="nav-link text-dark me-3">Quick Order</a>
             <a href="#" class="nav-link text-dark"><i class="fas fa-map-marker-alt"></i> Store Locator</a>
           </div>
-          <div class="d-flex align-items-center">
+          <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-end justify-content-end">
             <button class="btn btn-outline-dark me-2">Sign Up</button>
             <button class="btn btn-outline-dark me-2">Log In</button>
             <button class="btn btn-outline-dark">Cart</button>
+            <button class="btn btn-outline-dark">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
         </div>
 
-        <div class="bottom-row d-flex align-items-center px-4 mt-3">
-          <img src="./images/logo.png" alt="Logo" class="logo me-4">
-
-          <nav class="d-flex flex-wrap">
+        <div class="row bottom-row d-flex align-items-center px-4 mt-3">
+          <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center">
+            <img src="./images/logo.png" alt="Logo" class="logo me-4">
+          </div>
+          <nav class="d-flex flex-wrap col-lg-8 col-md-8 col-sm-12 d-flex">
             <div class="dropdown me-3">
               <button class="btn btn-light dropdown-toggle" type="button" id="topThreadDropdown"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -105,11 +109,12 @@
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">Previous</button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">Next</button>
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&lt;</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&gt;</button>
           </div>
         </div>
       </div>
+
       <div class="container-3 d-flex align-items-center justify-content-center">
         <div class="grid-item">
           <img src="./images//img1.png" alt="Image 1">
@@ -134,7 +139,12 @@
         perView: 1,
         autoplay: 4000,
         hoverpause: true,
-        animationDuration: 800
+        animationDuration: 800,
+        perView: 3,
+        breakpoints: {
+          1024: { perView: 2 },
+          768: { perView: 1 }
+        }
       }).mount();
     });
   </script>
